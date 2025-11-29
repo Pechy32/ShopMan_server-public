@@ -1,0 +1,32 @@
+{
+    "StandartUsers": {
+        "canAccess": [
+            "GET:/api/users/me",
+            "POST:/api/users/logout",
+            "GET:/api/lists",
+            "POST:/api/lists",
+            "POST:/api/lists/*",
+            "GET:/api/lists/*",
+            "DELETE:/api/lists/*",
+            "PUT:/api/lists/*"
+        ]
+    },
+    "Executives": {
+        "canAccess": [
+            "GET:/api/users/*",
+            "POST:/api/users/logout",
+            "GET:/api/lists",
+            "POST:/api/lists",
+            "POST:/api/lists/*",
+            "GET:/api/lists/*",
+            "DELETE:/api/lists/*",
+            "PUT:/api/lists/*",
+            "GET:/api/users"
+        ]
+    },
+    "Authorities": {
+        "canAccess": [
+            "*"
+        ]
+    }
+}
