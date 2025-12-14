@@ -1,0 +1,425 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: ShopMan
+meta:
+  id: wrk_2f917e8344c245eeada09db6a4eb974f
+  created: 1765705955983
+  modified: 1765706053186
+  description: ""
+collection:
+  - name: lists
+    meta:
+      id: fld_8c069e1154964e26a26693749ae80732
+      created: 1765702739197
+      modified: 1765706232035
+      sortKey: -1765702734194
+      description: ""
+    children:
+      - url: "{{baseUrl}}/lists"
+        name: create
+        meta:
+          id: req_f4f5c16285d74a53ba709a1ed1c63053
+          created: 1765702739201
+          modified: 1765702739201
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734193
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r\n  \"name\": \"list usera\"\r\n}"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/lists/:id/items"
+        name: add item
+        meta:
+          id: req_aeb6bb052a2a4bf1a0fe0777a435532d
+          created: 1765702739206
+          modified: 1765708430106
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734192
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r\n  \"name\": \"brambora\"\r\n}"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 693e927aff8edd1241add7be
+      - url: "{{baseUrl}}/lists/692ae54762352fd775890718/items/692aeee5dde05b1d40a4e48f"
+        name: delete item
+        meta:
+          id: req_0fc3673a18f443b682bccec07fae84bd
+          created: 1765702739208
+          modified: 1765702739208
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734191
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/lists/:id/items/:itemId"
+        name: edit item
+        meta:
+          id: req_0aa1b80eb26f42c0b6b42898cc0d55b6
+          created: 1765702739211
+          modified: 1765708242042
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734190
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \  \"name\": \"cuketa brambora\"\r
+
+            }"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: ""
+          - name: itemId
+            value: ""
+      - url: "{{ baseUrl}}/lists/"
+        name: get all
+        meta:
+          id: req_e990dae44e2445fea416b5b53fbd02ac
+          created: 1765702739213
+          modified: 1765708473475
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734189
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/lists/:id"
+        name: update
+        meta:
+          id: req_c3d90361060a41a78a76fdbf193e2cd9
+          created: 1765702739216
+          modified: 1765708535436
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734188
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \    \"name\": \"super list\"\r
+
+            }"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 693e927aff8edd1241add7be
+      - url: "{{baseUrl}}/lists/:id"
+        name: delete
+        meta:
+          id: req_92160807485048489812485fe3dacc3e
+          created: 1765702739219
+          modified: 1765708060531
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734187
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: ""
+      - url: "{{baseUrl}}/lists/:id/members"
+        name: add member
+        meta:
+          id: req_82a133077c0542d3bbf58d21da5241e8
+          created: 1765702739223
+          modified: 1765708556730
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734186
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \  \"userId\": \"692abc7e802b68b24efa596f\"\r
+
+            }\r\n"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 693e927aff8edd1241add7be
+      - url: "{{baseUrl}}/lists/:id/members/:memberId"
+        name: remove member
+        meta:
+          id: req_b89952a7927e474ea4bc7f1e2fa8736a
+          created: 1765702739225
+          modified: 1765708284791
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734185
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: ""
+          - name: memberId
+            value: ""
+      - url: "{{ baseUrl}}/lists/:id"
+        name: get one
+        meta:
+          id: req_ada20a7936c44aea9867a4af674bd449
+          created: 1765708486658
+          modified: 1765708508924
+          isPrivate: false
+          description: ""
+          sortKey: -1765702734188.5
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 693e927aff8edd1241add7be
+  - name: users
+    meta:
+      id: fld_b213a9efdce049709048d948652cd21f
+      created: 1765702773003
+      modified: 1765706286984
+      sortKey: -1765702769276
+      description: ""
+    children:
+      - url: "{{baseUrl}}/users/register"
+        name: register
+        meta:
+          id: req_141b5a57d6bb43179bd7df0bd6ac4ddc
+          created: 1765702773023
+          modified: 1765702773023
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769275
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \  \"name\": \"user\",\r
+
+            \  \"email\": \"user@user.com\",\r
+
+            \  \"password\": \"useruser\"\r
+
+            }\r\n"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/users/login"
+        name: login
+        meta:
+          id: req_b866eddc29d746a9bc392bfaa7fab1ad
+          created: 1765702773027
+          modified: 1765707996520
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769274
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{{ _.userLogin }}"
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/users/logout"
+        name: logout
+        meta:
+          id: req_040ff856dae84c48870ffa9e24c8cf29
+          created: 1765702773030
+          modified: 1765702773030
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769273
+        method: POST
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/users/me"
+        name: get logged user
+        meta:
+          id: req_e5349ed756f14d6693f04217329fb5a8
+          created: 1765702773032
+          modified: 1765702773032
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769272
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/users/"
+        name: get
+        meta:
+          id: req_feb55b12cdd146b198ebde64f7cfd13a
+          created: 1765702773036
+          modified: 1765702773036
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769271
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{baseUrl}}/users/:id"
+        name: delete
+        meta:
+          id: req_e43f1cb3fd8f4622a099b10192b558ee
+          created: 1765702773038
+          modified: 1765707853652
+          isPrivate: false
+          description: ""
+          sortKey: -1765702769270
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: 692abc7e802b68b24efa596f
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f2202d4e85b734e64dbf491f0a22b9c3a6cbc07f
+    created: 1765705956025
+    modified: 1765707998126
+  cookies:
+    - id: c7245be0-c25f-459b-83a7-ad01175f83a8
+      key: connect.sid
+      value: s%3ACRfM9AaHw-p4zCMujRkzgVML7M7ObbK8.IoFpLd9Vvcn6GT4OEd1P%2BlwhMk2BloS%2BxeAohxwk1F0
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_f2202d4e85b734e64dbf491f0a22b9c3a6cbc07f
+    created: 1765705955995
+    modified: 1765705955995
+    isPrivate: false
